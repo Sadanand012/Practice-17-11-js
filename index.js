@@ -12,6 +12,7 @@ app.get('/', (req, res) =>{
 app.get('/blog', (req, res) =>{
     res.send("Hello Blog YES..")
 })
+// find all
 app.get('/products', async (req, res) =>{
     try {
         const products = await Product.find({});
@@ -21,7 +22,7 @@ app.get('/products', async (req, res) =>{
         res.status(500).json({message: error.message})
     }
 })
-
+//find by Id
 app.get('/products/:id', async (req, res) =>{
     try {
         const {id} = req.params;
