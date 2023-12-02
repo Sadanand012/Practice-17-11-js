@@ -33,6 +33,7 @@ app.get('/products/:id', async (req, res) =>{
         res.status(500).json({message: error.message})
     }
 })
+//update product first find by id
 app.put('/products/:id', async (req, res) =>{
     try {
         const {id} = req.params;
@@ -46,6 +47,7 @@ app.put('/products/:id', async (req, res) =>{
         res.status(500).json({message: error.message})
     }
 })
+//first find by id then delete
 app.delete('/products/:id', async (req, res) =>{
     try {
         const {id} = req.params;
@@ -59,6 +61,7 @@ app.delete('/products/:id', async (req, res) =>{
         res.status(500).json({message: error.message})
     }
 })
+//creating product
 app.post("/product", async (req, res) =>{
     // console.log("Product insert", req.body);
     try {
