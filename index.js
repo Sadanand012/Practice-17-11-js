@@ -68,6 +68,7 @@ app.post("/product", async (req, res) =>{
         res.status(500).json({ message: error.message});
     }
 })
+//connecting mongoDB
 mongoose.set("strictQuery", false);
 mongoose
 .connect("mongodb://localhost:27017/mongoDB_task3")
